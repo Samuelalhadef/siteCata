@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&family=Rubik+Mono+One&display=swap');
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+/** NAVIGATION **/
+
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI";
+}
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover {
+  color: white;
+}
+
+/**** NAVBAR ****/
+nav {
+  background: rgb(59, 64, 65);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: calc(0.5rem + 1.5vw);
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+#icons {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 850px) {
+  #icons {
+    display: block;
+  }
+  #icons:before {
+    content: "\2630";
+  }
+  .active #icons:before {
+    content: "\2715";
+  }
+  nav ul {
+    position: fixed;
+    left: -100%;
+    top: 5%;
+    flex-direction: column;
+    background: gray;
+    width: 100%;
+    text-align: center;
+    transition: 0.25s;
+  }
+  nav li {
+    padding: 3px 0;
+  }
+  nav li:hover {
+    background: rgb(37, 40, 42);
+  }
+  nav.active ul {
+    left: 0;
+  }
+}
+
+.btn-toggle {
+  margin-top: 100px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  cursor: pointer;
+}
+
+body.dark {
+  color: #fff!important;
+  background: #333!important;
+}
+body.dark .btn-toggle {
+  background: #f1f1f1;
+  color: #333;
+}
+@media (max-width: 850px) {
+
+  .btn-toggle{
+    top: 7.5px;
+  right: 7.5px;
+  width: 40px;
+  height: 40px;
+  margin-top: 0px;
+  margin-right: 50px;
+  background: #000000;
+  font-size: 1vw;
+  
+  }
+  
+  
+  }
+
+
+.image-header {
+    width: 100%; /* La div de l'image s'étend sur toute la largeur de l'écran */
+    height: 200px; /* Hauteur fixe de 200px pour l'image */
+    overflow: hidden; /* Cache les parties de l'image qui dépassent */
+}
+
+.image-header img {
+    width: 100%; /* L'image s'étend pour couvrir la largeur */
+    height: 200px; /* Hauteur fixe de l'image */
+    object-fit: cover; /* Assure que l'image couvre la zone, peut-être recadrée */
+}
+/** Corps de page **/
+main .content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+/** conteneur pour articles **/
+
+.content h1 {
+    font-weight: bold;
+    /* Style pour le grand titre */
+
+}
+
+.content article {
+    margin-bottom: 20px; /* Espace entre les articles */
+}
+
+.content article h2 {
+    font-weight: bold;
+    /* Style pour les titres des articles */
+}
+
+
+
+.corps {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.corps p {
+  text-align: justify;
+  max-width: 100%;
+  
+}
+
+.corps img {
+    max-width: 100%;
+    margin: 10px 0;
+    /*align-self:first baseline; /* Alignez l'image en haut pour qu'elle occupe la même hauteur que le paragraphe */
+}
+
+/* Pour les grands écrans */
+@media screen and (min-width: 800px) {
+    .corps {
+        
+            flex-direction: row;
+            align-items: flex-start;
+          
+    }
+
+   .corps p {
+        
+            /*flex: 1;*/
+            padding-right: 20px; /* Espace entre le texte et l'image */
+            /*max-width: none; /* Réinitialisation de la largeur maximale */
+          
+    }
+
+    .corps img {
+       /* flex:2;*/
+        width: 300px; /* Largeur de l'image à 40% de l'écran */
+        padding: 10px;
+      }
+
+      
+}
+
+@media(max-width:830px) {
+  .btn-toggle{
+    top: px;
+    right: 15px;
+    width: 80px;
+    height: 80px;
+   
+
+  }
+
+  
+}
+
+
+
+
+
+
+/** TABLEAU Produits*/
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .product {
+    flex-basis: 18%; /* Pour les grands écrans */
+    margin: 1%;
+  }
+  
+  .product img {
+   
+    width: 100%;
+  height: 200px; /* Hauteur fixe pour toutes les images */
+  object-fit: contain; /* Assure que toute l'image est visible */
+  background-color: #f8f8f8;
+  }
+  .product h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    text-align: center;
+
+  }
+  @media (max-width: 800px) {
+    .product {
+      flex-basis: 48%; /* Pour les petits écrans */
+    }
+  }
+  

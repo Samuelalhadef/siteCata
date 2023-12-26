@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" type="text/css" href="abonement.css" />
+
+    
+    <body class="light">
+        <div class="btn-toggle">Go Nuit</div>
+
+  <nav id="nav">
+                <h3>Les Catas </h3>
+                <ul>
+                  <li>
+                    <a href="index.html">accueil</a>
+                  </li>
+                  <li>
+                    <a href="histoire1.html">Histoire</a>
+                  </li>
+                  <li>
+                    <a href="galerie.html">Galerie</a>
+                  </li>
+                  <li>
+                    <a href="abonement.html">Abonement</a>
+                  </li>
+                  <li>
+                    <a href="apropos.html">A propos</a>
+                  </li>
+                </ul>
+                <div id="icons"></div>
+          </nav>
+  
+      
+
+    
+    <hr>
+
+    
+        <main>
+          <div class="container">
+            <div class="flex-item"></div>
+            <div class="flex-item">
+            <form action="">
+                <h4>CREER UN COMPTE</h4>
+                <div class="name-field">
+                <label for="pseudo">Pseudo</label>
+                <input type="text" required minlength="7">
+
+
+                <label for="email">Email</label>
+                <input type="email" required>
+
+                <label for="age">Age</label>
+                <input type="number" required min="18">
+
+            </div>
+
+
+
+                <label for="mdp">Mot de passe</label>
+                <input type="password" required pattern="[a-z 0-9]{6,}">
+
+                
+
+                
+                
+                <label for="mdp">Entrer le mot de passe à nouveau</label>
+                <input type="password" required pattern="[a-z 0-9]{6,]}">
+
+
+                 <fieldset>
+                    <legend>Nationalitée</legend>
+                    <select id="">
+                        <option value="">Ouganda</option>
+                        <option value="">France</option>
+                        <option value="">Samoa</option>
+                        <option value="">Tokelau</option>
+                        <option value="">Tuvalu</option>
+                        <option value="">Kazakhstan</option>
+                        <option value="">kirghizistan</option>
+                        <option value="">Ouzbekistan</option>
+                        <option value="">Tadjikistan</option>
+                        <option value="">Turkmenistan</option>
+                        <option value="">Pakistan</option>
+                        <option value="">Montenegro</option>
+                        </select>
+                        <fieldset required>
+                            <legend> Sex</legend>
+                            <label for="f">FEMME</label>
+                            <input type="radio" name="genre" id="f">
+                            <label for="h">HOMME</label>
+                            <input type="radio" name="genre" id="h">
+                        </fieldset>
+                </fieldset>
+                <div class="valider">
+                <input type="reset" name="" id="">
+            <input type="submit" name="" id="">
+                </div>
+            <P>Vous avez deja un compte ? <a href="#">Se connecter</a></P>
+            </form>
+          </div>
+          <div class="flex-item"></div>
+          </div>
+        </main>
+    
+    <script src="test.js"></script> 
+</body>
+</html>
